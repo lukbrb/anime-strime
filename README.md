@@ -1,34 +1,37 @@
-Organisation du programme video-flux  
+# Anime-strime 
+--------------------------------------------------------------------------------------------------------------------------------------  
+## 1 - Organisation du projet 
+--------------------------------------------------------------------------------------------------------------------------------------  
 
+Menu pour choisir entre:  
 
-Menu pour choisir entre:
+1 - Regarder les animés disponibles  
+2 - Reprendre avec le dernier animé  
+3 - Entrer le nom d'un animé  
 
-1 - Regarder les animés disponibles
-2 - Reprendre avec le dernier animé
-3 - Entrer le nom d'un animé
+Choix 1 :  
+    On peut proposer:  
+        - une recherche des animés enregistrés (dans un fichier csv par exemple)  
+        - de refaire une recherche -> implique de créer une fonction pour enregistrer les noms des animés (formatés) et le.s lien.s associé.s  
 
-Choix 1 :
-    On peut proposer:
-        - une recherche des animés enregistrés (dans un fichier csv par exemple)
-        - de refaire une recherche -> implique de créer une fonction pour enregistrer les noms des animés (formatés) et le.s lien.s associé.s
+Choix 2:    
+    On va récupérer le nom et numéro du dernier animé regardé -> implique:  
+        - une fonction pour enregistrer nom et numéro de l'animé regardé  
+        - une fonction pour lire ce fichier s'il existe  
+        - une fonction pour faire la recherche via le nom recupéré dans le fichier   
 
-Choix 2:
-    On va récupérer le nom et numéro du dernier animé regardé -> implique:
-        - une fonction pour enregistrer nom et numéro de l'animé regardé
-        - une fonction pour lire ce fichier s'il existe
-        - une fonction pour faire la recherche via le nom recupéré dans le fichier 
+Choix 3:  
+    On va recupérer le nom entré et le formater de manière "le-nom-de-l-anime"  
+    On fait ensuite une recherche dans le fichier csv -> il faut que les noms soient formatés dans le fichier   
+    On utilisera la fonction recherche   
 
-Choix 3:
-    On va recupérer le nom entré et le formater de manière "le-nom-de-l-anime"
-    On fait ensuite une recherche dans le fichier csv -> il faut que les noms soient formatés dans le fichier 
-    On utilisera la fonction recherche 
+## 2 - Fonctions: 
+--------------------------------------------------------------------------------------------------------------------------------------  
 
-=============================================================================================================================================================================
-Fonctions: On liste ici toutes les fonctions qu'on utilisera
-------------------------------------------------------------
+**On liste ici toutes les fonctions qu'on utilisera**
 
-Fonctions liées au Webscraping:
-------------------------------
+### 2.1 - Fonctions liées au Webscraping:
+
 
     - get_liens(url : str) -> List[str] 
         Fonction prenant en argument une url et retournant une liste de tous les liens menant aux vidéos trouvés sur cette page
@@ -38,8 +41,7 @@ Fonctions liées au Webscraping:
         !! Il faudrait pouvoir trouver le lien associé à chaque nom d'animé également
     
 
-Fonctions liées aux fichiers:
------------------------------
+### 2.2 - Fonctions liées aux fichiers:
 
     - write_episode(nom_anime: str, num_episode: str) -> None:
         Fonction prenant en argument le nom de l'animé ainsi que le numéro de l'épisode cherché
@@ -60,8 +62,7 @@ Fonctions liées aux fichiers:
         !! Si nom d'animé pas trouvé, proposer des noms proches à ceux entrés par l'utilisateur car certains noms longs peuvent ne pas être tapés en entier 
         !! On peut également proposer une liste des animés commençant par la même lettre
 
-Fonctions liées à la manipulation de texte:
--------------------------------------------
+### 2.3 - Fonctions liées à la manipulation de texte:
 
     - formate_nom(nom : str) -> str:
         Fonction prenant en argument le nom entré par l'utilisateur et le formater telle que nom = "le-nom-de-l-anime"
@@ -69,16 +70,14 @@ Fonctions liées à la manipulation de texte:
     - deformate_nom(nom : str) -> str:
         Fonction faisant l'inverse de formate_nom. Elle renvoie un texte plus lisible à l'utilisateur 
     
-Fonctions liées à l'affichage:
-------------------------------
+### 2.4 - Fonctions liées à l'affichage:
 
     - print_ncol(ncol: int, objet: list | set) -> None:
         Affiche à l'écran un "print" reformaté mettant n colonnes côte à côte 
     
 
-=============================================================================================================================================================================
-Organisation: Organisation des fichiers et dossier du projet 
-------------------------------------------------------------
+## 3 - Structure du projet
+--------------------------------------------------------------------------------------------------------------------------------------  
 
 On commence par les fonctions les plus basiques ne nécessitant aucun élément externe : 
     - Les fonctions de manipulation de texte 
@@ -95,18 +94,18 @@ Au-dessus encore, les fonctions liées au Webscraping, nécessitant les noms mod
 
 Finalement, on aura un fichier "main.py" qui sera le point d'entré du programme
 
-Pour shcématiser : 
+Pour schématiser : 
 
---------------------------------------
-video-dl 
-    |_____ main.py 
-    |_____ requetes.py 
-    |_____ fichiers.py 
-    |_____ utils 
-             |_____ __init__.py 
-             |_____ texte.py 
-             |_____ affichage.py 
-    |_____ donnees
-             |_____ last_episode.txt 
-             |_____ data.csv 
---------------------------------------
+
+video-dl   
+    |_____ main.py   
+    |_____ requetes.py   
+    |_____ fichiers.py   
+    |_____ utils   
+             |_____ __init__.py   
+             |_____ texte.py   
+             |_____ affichage.py   
+    |_____ donnees  
+             |_____ last_episode.txt   
+             |_____ data.csv   
+
