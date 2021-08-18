@@ -9,23 +9,20 @@
 3 - Entrer le nom d'un animé  
 
 **Choix 1 :**  
-
     On peut proposer:  
         - une recherche des animés enregistrés (dans un fichier csv par exemple)  
         - de refaire une recherche -> implique de créer une fonction pour enregistrer les noms des animés (formatés) et le.s lien.s associé.s  
 
 **Choix 2 :**
-
     On va récupérer le nom et numéro du dernier animé regardé -> implique:  
         - une fonction pour enregistrer nom et numéro de l'animé regardé  
         - une fonction pour lire ce fichier s'il existe  
         - une fonction pour faire la recherche via le nom recupéré dans le fichier   
 
 **Choix 3 :**
-
-    On va recupérer le nom entré et le formater de manière "le-nom-de-l-anime"  
-    On fait ensuite une recherche dans le fichier csv -> il faut que les noms soient formatés dans le fichier   
-    On utilisera la fonction recherche   
+    - On va recupérer le nom entré et le formater de manière "le-nom-de-l-anime"  
+    - On fait ensuite une recherche dans le fichier csv -> il faut que les noms soient formatés dans le fichier   
+    - On utilisera la fonction recherche   
 
 ## 2 - Fonctions  
 
@@ -78,7 +75,6 @@
 ## 3 - Structure du projet
 
 On commence par les fonctions les plus basiques ne nécessitant aucun élément externe :  
-
     - Les fonctions de manipulation de texte 
     - Les fonctions d'affichage
      
@@ -97,14 +93,14 @@ Pour schématiser :
 
 
 video-dl   
-&nbsp;|_____ main.py     
-&nbsp;|_____ requetes.py     
-&nbsp;|_____ fichiers.py     
-&nbsp;|_____ utils   
-&nbsp;&nbsp;&nbsp;|_____ __init__.py   
-&nbsp;&nbsp;&nbsp;|_____ texte.py   
-&nbsp;&nbsp;&nbsp;|_____ affichage.py   
-&nbsp;|_____ donnees  
-&nbsp;&nbsp;&nbsp;|_____ last_episode.txt   
-&nbsp;&nbsp;&nbsp;|_____ data.csv   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ main.py     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ requetes.py     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ fichiers.py     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ utils   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ __init__.py   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ texte.py   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ affichage.py   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ donnees  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ last_episode.txt   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|_____ data.csv   
 
