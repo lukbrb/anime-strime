@@ -1,34 +1,33 @@
 # Anime-strime 
 --------------------------------------------------------------------------------------------------------------------------------------  
 ## 1 - Organisation du projet 
---------------------------------------------------------------------------------------------------------------------------------------  
 
-Menu pour choisir entre:  
+**Menu pour choisir entre :**  
 
 1 - Regarder les animés disponibles  
 2 - Reprendre avec le dernier animé  
 3 - Entrer le nom d'un animé  
 
-Choix 1 :  
+**Choix 1 :**  
+
     On peut proposer:  
         - une recherche des animés enregistrés (dans un fichier csv par exemple)  
         - de refaire une recherche -> implique de créer une fonction pour enregistrer les noms des animés (formatés) et le.s lien.s associé.s  
 
-Choix 2:    
+**Choix 2 :**
+
     On va récupérer le nom et numéro du dernier animé regardé -> implique:  
         - une fonction pour enregistrer nom et numéro de l'animé regardé  
         - une fonction pour lire ce fichier s'il existe  
         - une fonction pour faire la recherche via le nom recupéré dans le fichier   
 
-Choix 3:  
+**Choix 3 :**
+
     On va recupérer le nom entré et le formater de manière "le-nom-de-l-anime"  
     On fait ensuite une recherche dans le fichier csv -> il faut que les noms soient formatés dans le fichier   
     On utilisera la fonction recherche   
 
-## 2 - Fonctions: 
---------------------------------------------------------------------------------------------------------------------------------------  
-
-**On liste ici toutes les fonctions qu'on utilisera**
+## 2 - Fonctions  
 
 ### 2.1 - Fonctions liées au Webscraping:
 
@@ -77,35 +76,35 @@ Choix 3:
     
 
 ## 3 - Structure du projet
---------------------------------------------------------------------------------------------------------------------------------------  
 
-On commence par les fonctions les plus basiques ne nécessitant aucun élément externe : 
+On commence par les fonctions les plus basiques ne nécessitant aucun élément externe :  
+
     - Les fonctions de manipulation de texte 
     - Les fonctions d'affichage
      
-    ---> On les positionne dans un paquet "utils"
+     On les positionne dans un paquet "utils"
 
 
 Ensuite viennent les fonctions de manipulation de fichiers, dépendant des noms modifiés :
-    ---> On les placera dans un fichier "fichiers.py"
+    On les placera dans un fichier "fichiers.py"
 
 Au-dessus encore, les fonctions liées au Webscraping, nécessitant les noms modifiées et données enregistrées :
-    ---> On les placera dans un fichier "requetes.py"
+    On les placera dans un fichier "requetes.py"
 
-Finalement, on aura un fichier "main.py" qui sera le point d'entré du programme
+Finalement, on aura un fichier "main.py" qui sera le point d'entrée du programme
 
 Pour schématiser : 
 
 
 video-dl   
-    |_____ main.py   
-    |_____ requetes.py   
-    |_____ fichiers.py   
-    |_____ utils   
-             |_____ __init__.py   
-             |_____ texte.py   
-             |_____ affichage.py   
-    |_____ donnees  
-             |_____ last_episode.txt   
-             |_____ data.csv   
+&nbsp;|_____ main.py     
+&nbsp;|_____ requetes.py     
+&nbsp;|_____ fichiers.py     
+&nbsp;|_____ utils   
+&nbsp;&nbsp;&nbsp;|_____ __init__.py   
+&nbsp;&nbsp;&nbsp;|_____ texte.py   
+&nbsp;&nbsp;&nbsp;|_____ affichage.py   
+&nbsp;|_____ donnees  
+&nbsp;&nbsp;&nbsp;|_____ last_episode.txt   
+&nbsp;&nbsp;&nbsp;|_____ data.csv   
 
